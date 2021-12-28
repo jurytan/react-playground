@@ -167,3 +167,39 @@ ReactDOM.render(
 	document.getElementById('app')
 );
 
+// 13
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map(person =>
+  // expression goes here:
+  <li>{person}</li>
+);
+
+// ReactDOM.render goes here:
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
+
+
+// 14
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map((person, i) =>
+  // expression goes here:
+  <li key={'person_' + i}>{person}</li>
+);
+
+// ReactDOM.render goes here:
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
+
+// you can use this to dynamically create JSX elements
+// 15 
+const greatestDivEver = React.createElement(
+  'div',
+  null,
+  'i am div'
+);
