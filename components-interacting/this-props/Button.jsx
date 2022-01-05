@@ -9,3 +9,16 @@ export class Button extends React.Component {
     );
   }
 }
+
+// 08
+import React from 'react';
+
+export class Button extends React.Component {
+  render() {
+    return (
+      <button>
+        Click me!
+      </button>
+    );
+  }
+}
