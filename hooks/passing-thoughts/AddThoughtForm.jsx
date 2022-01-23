@@ -8,8 +8,22 @@ export function AddThoughtForm(props) {
     setText(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (text === '') {
+      return;
+    }
+    const thought = {
+      id: generateId(),
+      text: text,
+      expiresAt: getNewExpirationTime(),
+    };
+    props.addThought(thought);
+    setText('');
+  };
+
   return (
-    <form className="AddThoughtForm">
+    <form className="AddThoughtForm" onSubmit={handleSubmit}>
       <input
         type="text"
         value={text}
