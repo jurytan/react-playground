@@ -5,7 +5,7 @@ import { Child } from './Child';
 class Parent extends React.Component {
   constructor(props) {
     super(props);
-
+    this.changeName = this.changeName.bind(this);
     this.state = { name: 'Frarthur' };
   }
 
@@ -16,7 +16,7 @@ class Parent extends React.Component {
   }
 
   render() {
-    return <Child name={this.state.name} />
+    return <Child name={this.state.name} onChange={this.changeName} />
   }
 }
 
