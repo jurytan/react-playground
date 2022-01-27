@@ -22,9 +22,9 @@ class Parent extends React.Component {
     return (
       <div>
         <Child 
-          name={this.state.name} 
           onChange={this.changeName} />
-        <Sibling />
+        <Sibling
+          name={this.state.name} />
       </div>
     );
   }
