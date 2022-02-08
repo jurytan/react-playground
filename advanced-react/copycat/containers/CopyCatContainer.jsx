@@ -17,8 +17,8 @@ class CopyCatContainer extends React.Component {
       input: ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
     this.toggleTape = this.toggleTape.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
